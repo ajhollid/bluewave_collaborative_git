@@ -162,8 +162,63 @@ _Hint_
 >
 > This is useful if your branch isn't ready to merge into the original repository yet, or if you want to merge it into your own codebase.
 
+---
+
 ## Making a Pull Request
 
-Finally, it's time to get our feature branch merged into the codebase.
+> Finally, it's time to get our feature branch merged into the codebase.
+>
+> Head over to Github and go to the original repository. You should see that your branch has made it there!
+>
+> <img src="./img/pr.png" alt="pull request" width="75%" height="75%">
+>
+> Click on "Compare & pull request" button and follow the direcitons there.
 
-Head over to Github and go to the original repository. You should see that your branch has made it there!
+---
+
+## Cleanup
+
+> Once your pull request has been approved and your code has been merged in, you can delete your branch from both Github and your local machine.
+>
+> Before you delete, you will want to update your repository:
+>
+> ```
+> git fetch upstream
+> git checkout master
+> git merge upstream/master
+> ```
+>
+> Now your master branch is up to date, including your new feature.
+>
+> You can safely delete your feature branch:
+>
+> `git branch -d <branch_name`
+>
+> Example:
+>
+> `git branch -d feat/my-feature`
+>
+> To delete your branch on Github go to the branches page and follow the directions there.
+
+---
+
+## Afterword
+
+This is a general description of a collaborative workflow based around forks and branches.
+
+Each team will have a slightly different workflow and conventions, so please adapt this guide as needed.
+
+The main takeaway is that by working on a fork, using branches, and making pull requests we add a great deal of safety to our project and can work together with a minimum of code conflict.
+
+---
+
+## Try it out!
+
+1.  Fork the repo
+2.  Add this repo as a remote
+3.  Fetch latest changes
+4.  Create & Checkout a branch
+5.  Add your name to the readme
+6.  Add your changes to git and commit
+7.  Push your branch to the original repo
+8.  Make a pull request
