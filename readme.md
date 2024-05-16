@@ -68,6 +68,8 @@
 >
 > Your code on your forked repository's master is now up to date with master of the original repository. This is a great place to create a new branch and start on a new feature.
 
+---
+
 ## Creating and Checking out a Branch
 
 It's a good idea to create a branch for features on your project.
@@ -122,26 +124,46 @@ _Hint_
 
 ### Adding to Git
 
-Now that you've made some changes, you will want to add them to git. To do so, you have some options.
+> Now that you've made some changes, you will want to add them to git. To do so, you have some options.
+>
+> To add all of your changes in your projet to git, run:
+>
+> `git add .`
+>
+> To add a specific file to git, run:
+>
+> `git add <filename>`
+>
+> ### Committing to Git
+>
+> Now that you've added your changes, it's time to commit:
+>
+> `git commit -m "<descriptive_change_message>"`
+>
+> Example:
+>
+> `git commit -m "Added my name to Readme file"`
 
-To add all of your changes in your projet to git, run:
-
-`git add .`
-
-To add a specific file to git, run:
-
-`git add <filename>`
-
-### Committing to Git
-
-Now that you've added your changes, it's time to commit:
-
-`git commit -m "<descriptive_change_message>"`
-
-Example:
-
-`git commit -m "Added my name to Readme file"`
+---
 
 ## Pushing Your Branch
 
+> You've commited your code, now it's time to share it. To do so, we can push our branch to a repository. You will likely want to push your branch to the original repository so it can be merged in. You can do so by running:
+>
+> `git push <orignal_repository_remote> <branch_name>`
+>
+> Example:
+>
+> `git push upstream feat/my-feature`
+>
+> You can also push to you rown repository:
+>
+> `git push feat/my-feature`
+>
+> This is useful if your branch isn't ready to merge into the original repository yet, or if you want to merge it into your own codebase.
+
 ## Making a Pull Request
+
+Finally, it's time to get our feature branch merged into the codebase.
+
+Head over to Github and go to the original repository. You should see that your branch has made it there!
