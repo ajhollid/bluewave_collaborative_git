@@ -209,16 +209,3 @@ This is a general description of a collaborative workflow based around forks and
 Each team will have a slightly different workflow and conventions, so please adapt this guide as needed.
 
 The main takeaway is that by working on a fork, using branches, and making pull requests we add a great deal of safety to our project and can work together with a minimum of code conflict.
-
----
-
-## Try it out!
-
-1.  Fork the repo
-2.  Add this repo as a remote
-3.  Fetch latest changes
-4.  Create & Checkout a branch
-5.  Add your name to the readme
-6.  Add your changes to git and commit
-7.  Push your branch to the original repo
-8.  Make a pull request
