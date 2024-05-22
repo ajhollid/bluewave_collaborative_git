@@ -40,9 +40,9 @@
 
 ## Fetching changes from upstream and merging
 
-> You will often want to start from the latest code from the original prroject. To do so, run
+> You will often want to start from the latest code from the original project. To do so, run
 >
-> `git fetch <oringal_repository_remote>`
+> `git fetch <original_repository_remote>`
 >
 > Example:
 >
@@ -126,7 +126,7 @@ _Hint_
 
 > Now that you've made some changes, you will want to add them to git. To do so, you have some options.
 >
-> To add all of your changes in your projet to git, run:
+> To add all of your changes in your project to git, run:
 >
 > `git add .`
 >
@@ -140,23 +140,25 @@ _Hint_
 >
 > `git commit -m "<descriptive_change_message>"`
 >
+> If you are addressing an issue that has been opened on Github, you can add that to your commit message
+>
 > Example:
 >
-> `git commit -m "Added my name to Readme file"`
+> `git commit -m "Added my name to Readme file, resolves #31"`
 
 ---
 
 ## Pushing Your Branch
 
-> You've commited your code, now it's time to share it. To do so, we can push our branch to a repository. You will likely want to push your branch to the original repository so it can be merged in. You can do so by running:
+> You've committed your code, now it's time to share it. To do so, we can push our branch to a repository. You will likely want to push your branch to the original repository so it can be merged in. You can do so by running:
 >
-> `git push <orignal_repository_remote> <branch_name>`
+> `git push <original_repository_remote> <branch_name>`
 >
 > Example:
 >
 > `git push upstream feat/my-feature`
 >
-> You can also push to you rown repository:
+> You can also push to your own repository:
 >
 > `git push feat/my-feature`
 >
@@ -172,7 +174,7 @@ _Hint_
 >
 > <img src="./img/pr.png" alt="pull request" width="75%" height="75%">
 >
-> Click on "Compare & pull request" button and follow the direcitons there.
+> Click on "Compare & pull request" button and follow the directions there.
 
 ---
 
