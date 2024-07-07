@@ -296,6 +296,8 @@ Scenario: You've made some changes to your code base, but you don't want htem an
 
 > `git reset --hard`
 
+<a id=undo-commit></a>
+
 #### Undo a commit
 
 Scenario: You already made a commit `git commit -m <commit_msg>`, but realize you forgot to add something or want to remove something
