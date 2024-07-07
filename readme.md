@@ -1,6 +1,31 @@
 # Git Collaborative Workflow Tutorial
 
-## Forking a Repository
+1.  [Getting Started](#getting-started)
+    1. [Forking a Repoistory](#forking-a-repository)
+    2. [Cloning the Forked Repository](#cloning-the-repository)
+    3. [Setting the Original Repository as a Remote](#setting-remote)
+    4. [Fetching Changes from Upstream and Merging](#fetching-upstream)
+    5. [Creating and Checking out a Branch](#creating-branch)
+    6. [Adding and Commiting Changes](#adding-and-committing)
+    7. [Pushing your Branch](#pushing)
+    8. [Making a Pull Request](#pull-request)
+    9. [Cleanup](#cleanup)
+2.  [Common GIT Scenarios](#common-scenarios)
+    1. [Working on More than one Feature](#multiple-features)
+    2. [Accidentally Started Working on a New Feature](#accidental-start-feature)
+    3. [Reset Non-commited changes](#reset-non-committed-changes)
+    4. [Undo a commit](#undo-commit)
+3.  [Afterword](#afterword)
+
+<a id="getting-started"></a>
+
+## Getting Started
+
+Follow these directions to get started forking and cloning a repository so that you can contribute to the project
+
+<a id="forking-a-repository"></a>
+
+### Forking a Repository
 
 > 1.  Go to the Github page for the repository in question
 >
@@ -12,7 +37,9 @@
 
 ---
 
-## Clone the forked repository
+<a id="cloning-the-repository"></a>
+
+### Clone the forked repository
 
 > Clone the forked repository to your machine by running
 >
@@ -24,7 +51,9 @@
 
 ---
 
-## Set up the original repository as a remote
+<a id="setting-remote"></a>
+
+### Set up the original repository as a remote
 
 > You will want to be able to push and pull from the original repository. To do so, run:
 >
@@ -38,7 +67,9 @@
 
 ---
 
-## Fetching changes from upstream and merging
+<a id="fetching-upstream"></a>
+
+### Fetching changes from upstream and merging
 
 > You will often want to start from the latest code from the original project. To do so, run
 >
@@ -70,11 +101,13 @@
 
 ---
 
-## Creating and Checking out a Branch
+<a id="creating-branch"></a>
+
+### Creating and Checking out a Branch
 
 It's a good idea to create a branch for features on your project.
 
-### Creating a Branch
+#### Creating a Branch
 
 > Create a branch by running:
 >
@@ -96,7 +129,7 @@ It's a good idea to create a branch for features on your project.
 >
 > Whatever convention you choose, try to make the names descriptive
 
-### Checking Out a Branch
+#### Checking Out a Branch
 
 > To switch to a branch and work on it, run
 >
@@ -120,9 +153,11 @@ _Hint_
 
 ---
 
-## Adding and Committing Changes
+<a id="adding-and-committing"></a>
 
-### Adding to Git
+### Adding and Committing Changes
+
+#### Adding to Git
 
 > Now that you've made some changes, you will want to add them to git. To do so, you have some options.
 >
@@ -133,9 +168,9 @@ _Hint_
 > To add a specific file to git, run:
 >
 > `git add <filename>`
->
-> ### Committing to Git
->
+
+#### Committing to Git
+
 > Now that you've added your changes, it's time to commit:
 >
 > `git commit -m "<descriptive_change_message>"`
@@ -148,7 +183,9 @@ _Hint_
 
 ---
 
-## Pushing Your Branch
+<a id="pushing"></a>
+
+### Pushing Your Branch
 
 > You've committed your code, now it's time to share it. To do so, we can push our branch to a repository. You will likely want to push your branch to the original repository so it can be merged in. You can do so by running:
 >
@@ -166,7 +203,9 @@ _Hint_
 
 ---
 
-## Making a Pull Request
+<a id="pull-request"></a>
+
+### Making a Pull Request
 
 > Finally, it's time to get our feature branch merged into the codebase.
 >
@@ -178,7 +217,9 @@ _Hint_
 
 ---
 
-## Cleanup
+<a id="cleanup"></a>
+
+### Cleanup
 
 > Once your pull request has been approved and your code has been merged in, you can delete your branch from both Github and your local machine.
 >
@@ -204,7 +245,67 @@ _Hint_
 
 ---
 
-## Afterword
+<a id="common-scenarios"></a>
+
+### Common Scenarios
+
+<a id="multiple-features"></a>
+
+#### Working on More than one Feature
+
+If you are working on a feature and need to switch to another branch, you can follow this procedure:
+
+1.  From your current feature branch, add and commit all your changes
+
+> ```
+> git add .
+> git commit -m <your_commit_message>
+> ```
+
+2.  Checkout the branch you want to base your new branch from, in this case it might be master, then create a new branch
+
+> ```
+> git checkout master
+> git checkout -b feat/<new_branch>
+> ```
+
+Now you are starting on a new branch based on Master and you can work on a new feature. You can switch between feature branches
+
+<a id="accidental-start-feature"></a>
+
+#### Accidentaly Started Working on Another Feature
+
+Scenario: You were working on a feature branch `feat/my_feature` and wanted to start work on a new feature, but forgot to create a new branch. You've already made some changes and don't want to lose them.
+
+> ```
+> git stash
+> git checkout master
+> git checkout -b feat/new_feature
+> git stash pop
+> git add .
+> git commit -m <commit_msg>
+> ```
+
+This will "stash" all of your changes and allow you to move them to a new branch that you create.
+
+<a id="reset-non-committed-changes"></a>
+
+#### Reset Non-Committed Changes
+
+Scenario: You've made some changes to your code base, but you don't want htem anymore.
+
+> `git reset --hard`
+
+#### Undo a commit
+
+Scenario: You already made a commit `git commit -m <commit_msg>`, but realize you forgot to add something or want to remove something
+
+1.  Edit your file
+2.  `git commit --ammend -m <new_commit_msg>`
+
+---
+
+### Afterword
 
 This is a general description of a collaborative workflow based around forks and branches.
 
