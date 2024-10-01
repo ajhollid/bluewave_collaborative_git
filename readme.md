@@ -89,11 +89,11 @@ Follow these directions to get started forking and cloning a repository so that 
 >
 > Finally, merge the branch from the remote repository into your branch:
 >
-> `git merge <remote> <branch_name>`
+> `git merge <remote>/<branch_name>`
 >
 > Example:
 >
-> `git merge upstream master`
+> `git merge upstream/master`
 >
 > This will merge the remote master branch from the original repository into your forked repository's master branch
 >
